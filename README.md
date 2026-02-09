@@ -8,8 +8,6 @@ Dockerized application builds
 
 Kubernetes deployments with multi-environment support (Dev & QA)
 
-MySQL and Kafka integration
-
 Code quality enforcement using SonarQube Quality Gates
 
 Stability, rollback, and cost-optimization best practices
@@ -33,8 +31,6 @@ Containerization: Docker
 Orchestration: Kubernetes (k8s)
 
 Database: MySQL
-
-Messaging: Apache Kafka
 
 OS: Ubuntu (local / cloud compatible)
 
