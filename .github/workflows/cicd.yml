@@ -134,6 +134,14 @@ jobs:
         run: |
           git config user.name "sandip"
           git config user.email "sjon22557@gmail.com"
+          git add .
+
+          if git diff --cached --quiet; then
+          echo "No changes to commit"
+          else
+          git commit -m "Automated update"
+          git push
+          fi
           git add k8s/dev/app-deployment.yaml
           git commit -m "Update image tag in DEV manifest"
           git push origin main
