@@ -13,6 +13,7 @@ spec:
       labels:
         app: bankapp
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: bankapp
           image: sandip2301/javadevops:latest
