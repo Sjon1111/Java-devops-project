@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: bankapp
-          image: adijaiswal/bankapp:latest
+          image: sandip2301/javadevops:latest
           ports:
             - containerPort: 8080
           envFrom:
