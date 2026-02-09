@@ -203,3 +203,36 @@ To rollback:
 Revert the Git commit
 
 Argo CD syncs the previous state automatically
+
+🔁 Stability, Cost Optimization & Operational Strategy
+1. Ensuring Stability Across Dev / QA / Prod
+
+Stability across environments is achieved through environment isolation, configuration management, and controlled deployments.
+
+Namespace isolation:
+Separate Kubernetes namespaces (dev, qa, prod) prevent cross-environment impact.
+
+Environment-specific configuration:
+ConfigMaps and environment variables are used instead of hardcoded values.
+
+Consistent deployment strategy:
+The same Docker image and Kubernetes manifests are promoted across environments, reducing configuration drift.
+
+Health checks:
+Liveness and readiness probes ensure only healthy pods receive traffic.
+
+CI quality gates:
+SonarQube Quality Gates ensure only high-quality code progresses to deployment.
+
+GitOps with Argo CD:
+Git acts as the single source of truth, ensuring predictable and auditable deployments.
+
+2. Rollback Strategy for Failed Deployments
+
+Multiple rollback mechanisms are implemented to ensure fast recovery:
+
+Kubernetes Rollback
+kubectl rollout undo deployment <deployment-name> -n dev
+
+
+This restores the previous ReplicaSet.
